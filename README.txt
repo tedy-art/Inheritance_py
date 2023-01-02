@@ -93,3 +93,96 @@ e.g.
     jay.m2()
     jay.m1()
     jay.m3()
+
+3) Multiple inheritance:
+-> Python provides us a flexiblity to inherit Multiple base class in the child class
+
+-> One child and Multiple paranets is Multiple inheritance.
+
+e.g. 
+    class p1:
+        def m1(self):
+            print("This is parent1 m1 method.")
+
+    class p2:
+        def m2(self):
+            print("This is parnet2 m2 method.")
+
+    class c(p1, p2):
+        def m3(self):
+            print("This is child m3 method.")
+
+    jay = c()
+    jay.m2()
+    jay.m1()
+    jay.m3()
+
+
+4) Hirarchical inheritance:
+-> One Parent and Multiple child is Hirarchical inheritance.
+
+e.g.
+    class p:
+    def m1(self):
+        print("This is parent m1 method.")
+
+    class c1(p):
+        def m2(self):
+            print("This is child1 m2 method.")
+
+
+    class c2(p):
+        def m3(self):
+            print("This is child2 m3 method.")
+
+    jay = c1()
+    jay.m2()
+    jay.m1()
+
+    viru = c2()
+    viru.m1()
+    viru.m3()
+
+5) Hybrid inheritance:
+-> combination of all types of inheritance is Hybrid inheritance.
+-> inheritance consisting of Multiple types of inheritance is called Hybrid inheritance
+
+e.g.
+        class school:
+            def func1(self):
+                print("This function is in school.")
+
+        class student1(school):
+            def func2(self):
+                print("This function is in student1.")
+
+        class student2(school):
+            def func3(self):
+                print("This function is in student2.")
+
+        class student3(student1, school):
+            def func4(self):
+                print("This function is in student3.")
+
+        print('*'*10, "student3", '*'*10)
+        o1 = student3()
+        o1.func1()
+        o1.func2()
+        o1.func4()
+
+        print('*'*10, "student2", '*'*10)
+        o2 = student2()
+        o2.func1()
+        o2.func3()
+
+        print('*'*10, "student1", '*'*10)
+        o3 = student1()
+        o3.func1()
+        o3.func2()
+
+        print('*'*10, "School", '*'*10)
+        o4 = school()
+        o4.func1()
+
+6) Cyclic inheritance:-
+Python does not support Cyclic inheritance.
